@@ -124,50 +124,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7208467994343954051, guid: 90831bd4a09bd304f93b2ccd1b29c35e, type: 3}
   m_PrefabInstance: {fileID: 7561727882977121677}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &142877628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 142877630}
-  - component: {fileID: 142877629}
-  m_Layer: 0
-  m_Name: Game Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &142877629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142877628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad018fa72e495254ab146d0f783ef89f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!4 &142877630
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142877628}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01581, y: 1.08816, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,10 +419,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 1057481314718958142, guid: 7f87aadb3582e7040a8736913a53b422, type: 3}
-      propertyPath: m_TagString
-      value: Enemies
-      objectReference: {fileID: 0}
     - target: {fileID: 4617193367098341150, guid: 7f87aadb3582e7040a8736913a53b422, type: 3}
       propertyPath: player
       value: 
@@ -594,4 +546,3 @@ SceneRoots:
   - {fileID: 7561727882977121677}
   - {fileID: 5210890335392845479}
   - {fileID: 3662369901314360835}
-  - {fileID: 142877630}
