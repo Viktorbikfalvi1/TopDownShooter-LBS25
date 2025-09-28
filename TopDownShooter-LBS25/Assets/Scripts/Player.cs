@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,6 +6,7 @@ public class Player : MonoBehaviour
 {
     Rigidbody2D rb;
     Vector2 moveInput;
+    Vector2 screenBoundery;
     [SerializeField] float moveSpeed = 4f;
     [SerializeField] float rotationSpeed = 700f;
     [SerializeField] float bulletSpeed = 7f;
@@ -16,6 +18,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        screenBoundery = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
     }
 
     private void OnMove(InputValue value)
@@ -36,6 +39,10 @@ public class Player : MonoBehaviour
         {
             targetAngle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg;
         }
+
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -screenBoundery.x, screenBoundery.x)
+                                        ,Mathf.Clamp(transform.position.y, -screenBoundery.y, screenBoundery.y));
+                                        
     }
 
     void FixedUpdate()
@@ -44,5 +51,12 @@ public class Player : MonoBehaviour
         rb.MoveRotation(rotation);
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemies"))
+        {
+            Destroy(gameObject);
+        }
+        
+    }
 }
