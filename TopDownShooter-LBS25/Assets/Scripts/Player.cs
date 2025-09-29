@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     Vector2 moveInput;
     Vector2 screenBoundery;
+    [SerializeField] float Health = 5;
     [SerializeField] float moveSpeed = 4f;
     [SerializeField] float rotationSpeed = 700f;
     [SerializeField] float bulletSpeed = 7f;
@@ -53,10 +54,16 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.CompareTag("Enemies"))
+        {
+            Health = Health - 1;
+        }
+       
+        if (Health < 0)
         {
             Destroy(gameObject);
         }
-        
+
     }
 }

@@ -119,7 +119,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4617193367098341150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ca94325dba964429625a0433a7c86b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  moveSpeed: 4
+  moveSpeed: 2
   player: {fileID: 0}
 --- !u!70 &6806715990836052256
 CapsuleCollider2D:
